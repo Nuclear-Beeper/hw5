@@ -2,6 +2,8 @@
 
 This game is a piano simulator.
 
+When the player presses certian keys, the program will make corresponding piano sound and display some colored circles.
+
 Key mapping table：
 ` = F4#
 1 = G4#
