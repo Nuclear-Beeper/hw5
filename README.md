@@ -15,7 +15,7 @@ Key mapping table：
 9 = A5#
 0 = C6
 - = C6#
-+ = D6#
+= = D6#
 
 Q = A4
 W = B4
