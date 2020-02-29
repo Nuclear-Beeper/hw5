@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js" crossorigin=""></script>
+    
+    
+
+  <!--<base href="https://editor.p5js.org/Nuclear-Beeper/sketches/_A6l7uNR/">--><base href="."><style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+</style><script src="https://editor.p5js.org/previewScripts.js"></script><style data-emotion=""></style><script>
+    function getScriptOff(line) {
+      var offs = [[54,"sketch"]];
+      var l = 0;
+      var file = '';
+      for (var i=0; i<offs.length; i++) {
+        var n = offs[i][0];
+        if (n < line && n > l) {
+          l = n;
+          file = offs[i][1];
+        }
+      }
+      return [line - l, file];
+    }
+    // catch reference errors, via http://stackoverflow.com/a/12747364/2994108
+    window.onerror = function (msg, url, lineNumber, columnNo, error) {
+        var string = msg.toLowerCase();
+        var substring = "script error";
+        var data = {};
+        if (url.match(/^(http:\/\/|https:\/\/)/) !== null && error.stack){
+          var errorNum = error.stack.split('about:srcdoc:')[1].split(':')[0];
+          var fileInfo = getScriptOff(errorNum);
+          data = msg + ' (' + fileInfo[1] + ': line ' + fileInfo[0] + ')';
+        } else {
+          var fileInfo = getScriptOff(lineNumber);
+          data = msg + ' (' + fileInfo[1] + ': line ' + fileInfo[0] + ')';
+        }
+        window.parent.postMessage([{
+          log: [{
+            method: 'error',
+            data: [data],
+            id: Date.now().toString()
+          }],
+          source: fileInfo[1]
+        }], '*');
+      return false;
+    };
+  </script></head>
+  <body>
+    <script data-tag="@fs-sketch.js">var g4
+var a4
+var b4
+
+var c5
+var d5
+var e5
+var f5
+var g5
+var a5
+var b5
+var c6
+var d6
+var e6
+var f6
+
+var fs4
+var gs4
+var as4
+var cs5
+var ds5
+var fs5
+var gs5
+var as5
+var cs6
+var ds6
+
+
+function setup() {
+  createCanvas(480, 300);
+  frameRate(15);
+  colorMode(HSB, 100);
+}
+
+function printWKey(x,y) {
+  fill(255);
+  rect(x ,y , 30, 100);
+}
+
+function printBKey(x,y) {
+  fill(0);
+  rect(x, y, 20, 60);
+}
+
+function preload() {
+  soundFormats("wav");
+  
+  g4 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/0ee64337-7995-4571-86bc-2c95116b364d.wav");
+  a4 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/574e6d2e-d33a-49c1-9dd3-48c38940eaf0.wav");
+  b4 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/6f0ef6cc-b3ca-4b58-ad5d-8ecc76a86a65.wav");
+  
+  c5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/39d53995-a029-4230-ae65-c83f19ae6eea.wav");
+  d5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/fa193419-0064-44ca-a38a-feb57dd56a44.wav");
+  e5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/736c3e90-7786-48b1-8692-090f642b8c6b.wav");
+  f5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/b681bded-8cb1-473b-b821-572c7d25a46e.wav");
+  g5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/e7be60fc-7207-4969-a260-a0a186d9d301.wav");
+  a5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/64e9b332-88fc-4fbd-b3ae-72f6cf5f1d75.wav");
+  b5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/2b79dbba-02fd-4be9-8c8c-d875da70039a.wav");
+  c6 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/d753ab6d-9bf5-402c-961a-6fe52ed8dd19.wav");
+  d6 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/cc522c9a-9fbc-443e-b88b-0baa215dabab.wav");
+  e6 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/e4fde3d2-972a-414a-9182-deb4e4cc1a39.wav");
+  f6 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/a3aa259e-262c-46be-a849-977dcd80ea81.wav");
+  
+  fs4 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/294a2981-a432-4808-bb4d-8c3662f25888.wav");
+  gs4 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/c9335418-f635-49ab-a9a7-5c739e3f9908.wav");
+  as4 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/873ca5f7-eefc-4dd2-88f1-051b5d8eafd4.wav");
+  cs5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/4b921f2a-62a1-4613-bd91-cb79d2b4bdf1.wav");
+  ds5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/dce25f9c-2c6d-47a8-955d-ac10764a1901.wav");
+  fs5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/64b50a8a-d9a9-4cce-9ace-9a69c87f8915.wav");
+  gs5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/03d05dda-40cd-460b-8af2-c85cd22c829f.wav");
+  as5 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/39a74ac9-81e5-4a8e-b1e3-dd9b082a9f3b.wav");
+  cs6 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/69bb1547-29c5-438f-929b-cdf76d3a14da.wav");
+  ds6 = loadSound("https://assets.editor.p5js.org/5e3229626161130017fa2f9b/a762d999-7d25-46b4-bba6-1aa9b0dcfa56.wav");
+}
+
+function keyPressed(){
+  
+  fill(random(100), 90,random(80,100));
+  noStroke();
+  ellipse(random(10, 290), random(10,150), random(40,80));
+  
+   // if (key === 'tab')
+   //  g4.play();
+   if (key === 'q')
+    a4.play();
+
+  if (key === 'w')
+    b4.play();
+  //text("B", random(width), random(height));
+  
+  if (key === 'e')
+    c5.play();
+  if(key ==='r')
+    d5.play()
+  if(key ==='t')
+    e5.play();
+  if(key ==='y')
+    f5.play();
+  if(key ==='u')
+    g5.play();
+  if(key ==='i')
+    a5.play();
+  if(key ==='o')
+    b5.play();
+  if(key ==='p')
+    c6.play();
+  if(key ==='[')
+    d6.play()
+  if(key ===']')
+    e6.play()
+  // if(key ==='\')
+  //   f6.play();
+  
+  if (key === '`')
+    fs4.play();
+  if (key === '1')
+    gs4.play();
+  if (key === '2')
+    as4.play();
+  if (key === '3')
+    c5.play();
+  if (key === '4')
+    cs5.play();
+  if (key === '5')
+    ds5.play();
+  if (key === '6')
+    f5.play();
+  if (key === '7')
+    fs5.play();
+  if (key === '8')
+    gs5.play();
+  if (key === '9')
+    as5.play();
+  if (key === '0')
+    c6.play();
+  if (key === '-')
+    cs6.play();
+  if (key === '=')
+    ds6.play(); 
+}
+
+
+function draw() {
+  background(100,0,50,30);
+  //fill(255)
+  
+  stroke(3);
+  
+  //printWKey(10, 190);
+  printWKey(40, 190);
+  
+    printWKey(70, 190);
+  fill(0);
+  text("A", 80, 265);
+  text("q", 80, 280);
+    printWKey(100, 190);
+  fill(0);
+  text("B", 110, 265);
+  text("w", 110, 280);
+    printWKey(130, 190);
+  fill(0);
+  text("C", 140, 265);
+  text("e", 140, 280);
+    printWKey(160, 190);
+  fill(0);
+  text("D", 170, 265);
+  text("r", 170, 280);
+    printWKey(190, 190);
+  fill(0);
+  text("E", 200, 265);
+  text("t", 200, 280);
+    printWKey(220, 190);
+  fill(0);
+  text("F", 230, 265);
+  text("y", 230, 280);
+    printWKey(250, 190);
+  fill(0);
+  text("G", 260, 265);
+  text("u", 260, 280);
+    printWKey(280, 190);
+  fill(0);
+  text("A", 290, 265);
+  text("i", 290, 280);
+    printWKey(310, 190);
+  fill(0);
+  text("B", 320, 265);
+  text("o", 320, 280);
+    printWKey(340, 190);
+  fill(0);
+  text("C", 350, 265);
+  text("p", 350, 280);
+    printWKey(370, 190);
+  fill(0);
+  text("D", 380, 265);
+  text("[", 380, 280);
+    printWKey(400, 190);
+  fill(0);
+  text("E", 410, 265);
+  text("]", 410, 280);
+  //   printWKey(430, 190);
+  // fill(0);
+  // text("F", 440, 265);
+  // text("", 260, 280);
+  
+    printBKey(30,190);
+  text("F#", 35, 188);
+  fill(255);
+  text("`", 35, 210);
+    printBKey(60,190);
+  text("G#", 65, 188);
+  fill(255);
+  text("1", 65, 210);
+    printBKey(90,190);
+  text("A#", 95, 188);
+  fill(255);
+  text("2", 95, 210);
+  
+    printBKey(150,190);
+  text("C#", 155, 188);
+  fill(255);
+  text("4", 155, 210);
+    printBKey(180,190);
+  text("D#", 185, 188);
+  fill(255);
+  text("5", 185, 210);
+  
+    printBKey(240,190);
+  text("F#", 245, 188);
+  fill(255);
+  text("7", 245, 210);
+    printBKey(270,190);
+  text("G#", 275, 188);
+  fill(255);
+  text("8", 275, 210);
+    printBKey(300,190);
+  text("F#", 305, 188);
+  fill(255);
+  text("9", 305, 210);
+  
+    printBKey(360,190);
+  text("C#", 365, 188);
+  fill(255);
+  text("-", 365, 210);
+    printBKey(390,190);
+  text("D#", 395, 188);
+  fill(255);
+  text("=", 395, 210);
+  //printBKey(420,190);
+}
+
+</script>
+  
+
+<canvas id="defaultCanvas0" class="p5Canvas" width="960" height="600" style="width: 480px; height: 300px;"></canvas></body></html>
