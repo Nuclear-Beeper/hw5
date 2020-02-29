@@ -17,7 +17,6 @@ Key mapping table：
 - = C6#
 + = D6#
 
-tab = G4
 Q = A4
 W = B4
 E = C5
